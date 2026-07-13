@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+
+/* ============================================
+   BOOSTCARE DESIGN TOKENS
+   Traducción 1:1 de las variables de Figma
+   Colección Primitives → Colección Semantic
+   ============================================ */
+
+@theme {
+  /* ---------- PRIMITIVES ---------- */
+
+  /* green (marca) */
+  --color-green-50: #E1F5EE;
+  --color-green-100: #C8EDE0;
+  --color-green-200: #9FE1CB;
+  --color-green-300: #5DCAA5;
+  --color-green-400: #35B58C;
+  --color-green-500: #1D9E75;
+  --color-green-600: #0F6E56;
+  --color-green-700: #0A5F4B;
+  --color-green-800: #085041;
+  --color-green-900: #04342C;
+
+  /* coral (acento / herencia Boost) */
+  --color-coral-50: #FAECE7;
+  --color-coral-200: #F0997B;
+  --color-coral-400: #D85A30;
+  --color-coral-600: #993C1D;
+  --color-coral-800: #4A1B0C;
+
+  /* neutral (gris verdoso) */
+  --color-neutral-50: #F7FAF8;
+  --color-neutral-100: #EEF3F0;
+  --color-neutral-200: #DCE5E0;
+  --color-neutral-300: #C2CFC8;
+  --color-neutral-500: #71857B;
+  --color-neutral-600: #55685E;
+  --color-neutral-700: #405148;
+  --color-neutral-800: #2B3A32;
+  --color-neutral-900: #1A2620;
+  --color-neutral-950: #0F1712;
+
+  /* feedback crudos */
+  --color-red-100: #FEE2E2;
+  --color-red-500: #DC2626;
+  --color-red-700: #B91C1C;
+  --color-amber-100: #FDEAD1;
+  --color-amber-500: #D97706;
+  --color-amber-700: #92400E;
+
+  /* ---------- SEMANTIC (los alias de Figma) ---------- */
+  /* Las pantallas usan SOLO estos — igual que en Figma  */
+
+  --color-bg-default: #FFFFFF;
+  --color-surface: var(--color-neutral-50);
+  --color-brand-subtle: var(--color-green-50);
+
+  --color-primary: var(--color-neutral-950);      /* text/primary */
+  --color-secondary: var(--color-neutral-600);    /* text/secondary */
+  --color-on-brand: #FFFFFF;                      /* text/on-brand */
+
+  --color-border-default: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-300);
+
+  --color-action-primary: var(--color-green-600);
+  --color-action-primary-pressed: var(--color-green-800);
+
+  --color-danger: var(--color-red-500);
+  --color-warning: var(--color-amber-500);
+  --color-success: var(--color-green-500);
+
+  --color-accent: var(--color-coral-400);
+  --color-accent-strong: var(--color-coral-600);
+
+  /* ---------- RADIUS (colección Layout) ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* ---------- TIPOGRAFÍA ---------- */
+  --font-sans: "Manrope", system-ui, sans-serif;
+}
+
+/* Nota: la escala de spacing NO se define porque tu escala 4pt
+   de Figma (space/1=4 ... space/12=48) coincide con la de Tailwind:
+   p-1 = 4px · p-2 = 8px · p-3 = 12px · p-4 = 16px · p-6 = 24px ...
+   Diseñaste en el estándar sin saberlo 😉 */
+
+
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* ============================================
+   Dark mode (v1.1): cuando toque, los semantic
+   de arriba se moverán a :root y aquí vivirá
+   [data-theme="dark"] { ... } con otros primitives.
+   Mismos nombres, distinto tema — como planeamos.
+   ============================================ */
