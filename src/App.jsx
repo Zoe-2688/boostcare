@@ -3,6 +3,7 @@ import Badge from './components/Badge'
 import Input from './components/Input'
 import PatientCard from './components/PatientCard'
 import Note from './components/Note'
+import { patients } from './data/patients'
 
 export default function App() {
   return (
@@ -20,9 +21,9 @@ export default function App() {
       <Input id="correo" label="Correo electrónico" placeholder="nombre@clinica.com" />
       <Input id="error-demo" label="Correo electrónico" placeholder="nombre@clinica.com" error="Correo no válido" />
       <Input id="disabled-demo" label="Correo electrónico" placeholder="nombre@clinica.com" disabled />
-      <PatientCard initials="CM" name="Carlos Mendoza" detail="81 años · Alzheimer temprano" level="low" adherence="43%" />
-      <PatientCard initials="AT" name="Ana Torres" detail="67 años · Diabetes tipo 2" level="medium" adherence="71%" />
-      <PatientCard initials="MG" name="María González" detail="72 años · Hipertensión" level="high" adherence="94%" />
+      {patients.map(p => (
+        <PatientCard key={p.id} {...p} />
+      ))}
       <Note>Tu paciente recibirá una invitación para descargar Boost gratis.</Note>
     </div>
   )
