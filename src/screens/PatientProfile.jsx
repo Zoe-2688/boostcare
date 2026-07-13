@@ -34,9 +34,15 @@ export default function PatientProfile() {
       </div>
 
       {/* métricas */}
+      {/* métricas */}
       <div className="flex gap-3">
         <div className="flex-1 flex flex-col items-center gap-1 bg-bg-default border border-border-default rounded-(--radius-md) p-3">
-          <span className="text-xl font-bold text-primary">{patient.adherence}%</span>
+          <span className={`text-xl font-bold ${patient.level === 'high' ? 'text-success'
+              : patient.level === 'medium' ? 'text-warning'
+                : 'text-danger'
+            }`}>
+            {patient.adherence}%
+          </span>
           <span className="text-xs text-secondary">Adherencia</span>
         </div>
         <div className="flex-1 flex flex-col items-center gap-1 bg-bg-default border border-border-default rounded-(--radius-md) p-3">
