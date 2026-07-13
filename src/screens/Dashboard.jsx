@@ -3,6 +3,7 @@ import PatientCard from '../components/PatientCard'
 import Tabbar from '../components/Tabbar'
 import { useNavigate } from 'react-router-dom'
 import { appointments } from '../data/appointments'
+import ResumenIA from '../components/ResumenIA'
 
 export default function Dashboard() {
     // datos derivados
@@ -23,10 +24,13 @@ export default function Dashboard() {
                     Lunes 13 de julio · {enRiesgo.length} pacientes en alerta
                 </p>
             </header>
+
+            <ResumenIA patients={patients} />
+            
             {/* Agenda de hoy */}
             <section className="flex flex-col gap-3">
                 <h2 className="text-sm font-semibold text-secondary">Agenda de hoy</h2>
-                {appointments.map(a => (
+                {appointments.filter(a => a.day.startsWith('Hoy')).map(a => (
                     <div key={a.id} className="flex items-center gap-3 bg-bg-default border border-border-default rounded-(--radius-md) p-4">
                         <span className="text-sm font-semibold text-action-primary bg-brand-subtle rounded-(--radius-sm) px-2 py-1">
                             {a.time}
@@ -34,6 +38,7 @@ export default function Dashboard() {
                         <span className="flex flex-col gap-0.5">
                             <span className="text-sm font-semibold text-primary">{a.name}</span>
                             <span className="text-sm text-secondary">{a.reason}</span>
+                            <span className="text-xs text-secondary">📍 {a.location}</span>
                         </span>
                     </div>
                 ))}

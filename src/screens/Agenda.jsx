@@ -21,6 +21,7 @@ export default function Agenda() {
               <span className="flex flex-col gap-0.5">
                 <span className="text-sm font-semibold text-primary">{a.name}</span>
                 <span className="text-sm text-secondary">{a.reason}</span>
+                <span className="text-xs text-secondary">📍 {a.location}</span>
               </span>
             </div>
           ))}
