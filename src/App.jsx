@@ -5,6 +5,8 @@ import Pacientes from './screens/Pacientes'
 import PatientProfile from './screens/PatientProfile'
 import NuevaReceta from './screens/NuevaReceta'
 import RecetaEnviada from './screens/RecetaEnviada'
+import Agenda from './screens/Agenda'
+import PerfilMedico from './screens/PerfilMedico'
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
         <Route path="/paciente/:id" element={<PatientProfile />} />
         <Route path="/paciente/:id/receta" element={<NuevaReceta />} />
         <Route path="/paciente/:id/receta-enviada" element={<RecetaEnviada />} />
+        <Route path="/agenda" element={<Agenda />} />
+<Route path="/perfil" element={<PerfilMedico />} />
       </Routes>
     </BrowserRouter>
   )
