@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Landing from './screens/Landing'
 import Login from './screens/Login'
 import Dashboard from './screens/Dashboard'
 import Pacientes from './screens/Pacientes'
@@ -18,7 +19,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/pacientes" element={<Pacientes />} />
         <Route path="/paciente/:id" element={<PatientProfile />} />
