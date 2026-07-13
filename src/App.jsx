@@ -1,5 +1,6 @@
 import Button from './components/Button'
 import Badge from './components/Badge'
+import Input from './components/Input'
 
 export default function App() {
   return (
@@ -14,6 +15,9 @@ export default function App() {
         <Badge level="medium">71%</Badge>
         <Badge level="low">43%</Badge>
       </div>
+      <Input id="correo" label="Correo electrónico" placeholder="nombre@clinica.com" />
+      <Input id="error-demo" label="Correo electrónico" placeholder="nombre@clinica.com" error="Correo no válido" />
+      <Input id="disabled-demo" label="Correo electrónico" placeholder="nombre@clinica.com" disabled />
     </div>
   )
 }
