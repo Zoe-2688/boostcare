@@ -45,7 +45,7 @@ export default function PatientCard({
       </span>
 
       {/* badge — tu "Hug", pegado a la derecha */}
-      <Badge level={level}>{adherence}</Badge>
+      <Badge level={level}>{adherence}%</Badge>
     </button>
   )
 }

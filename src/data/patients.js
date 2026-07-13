@@ -10,7 +10,7 @@ export const patients = [
     detail: '81 años · Alzheimer temprano',
     initials: 'CM',
     level: 'low',
-    adherence: '43%',
+    adherence: 43,
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const patients = [
     detail: '67 años · Diabetes tipo 2',
     initials: 'AT',
     level: 'medium',
-    adherence: '71%',
+    adherence: 71,
   },
   {
     id: 3,
@@ -26,14 +26,14 @@ export const patients = [
     detail: '72 años · Hipertensión',
     initials: 'MG',
     level: 'high',
-    adherence: '94%',
+    adherence: 94,
   },
    {
     id: 3,
     name: 'Cármen Mercédes',
     detail: '62 años · Demencia Frontotemporal',
     initials: 'CM',
-    level: 'high',
-    adherence: '94%',
+    level: 'low',
+    adherence: 40,
   },
 ]
