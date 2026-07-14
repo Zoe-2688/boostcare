@@ -14,10 +14,7 @@ export default function PatientProfile() {
     <div className="min-h-screen bg-surface max-w-sm mx-auto flex flex-col gap-6 px-4 pt-14 pb-8">
 
       {/* topbar */}
-      <button
-        onClick={() => navigate(-1)}
-        className="text-sm font-semibold text-primary text-left"
-      >
+      <button onClick={() => navigate('/dashboard')} className="text-sm font-semibold text-primary text-left">
         ← Perfil del paciente
       </button>
 
@@ -38,8 +35,8 @@ export default function PatientProfile() {
       <div className="flex gap-3">
         <div className="flex-1 flex flex-col items-center gap-1 bg-bg-default border border-border-default rounded-(--radius-md) p-3">
           <span className={`text-xl font-bold ${patient.level === 'high' ? 'text-success'
-              : patient.level === 'medium' ? 'text-warning'
-                : 'text-danger'
+            : patient.level === 'medium' ? 'text-warning'
+              : 'text-danger'
             }`}>
             {patient.adherence}%
           </span>

@@ -1,7 +1,9 @@
 import { patients } from '../data/patients'
 import Badge from '../components/Badge'
 import Button from '../components/Button'
+import Note from '../components/Note'   // ← este falta
 import { useNavigate } from 'react-router-dom'
+
 
 export default function CaregiverView() {
     // el cuidador ve UN paciente: Cármen (id 4)
@@ -18,6 +20,9 @@ export default function CaregiverView() {
                 <p className="text-sm text-secondary">Cuidas a {patient.name}</p>
             </header>
 
+            <Note>
+                Tu médico te invitó a seguir el tratamiento de Cármen. Aquí ves cómo va y puedes avisarle si notas algo.
+            </Note>
             {/* estado del paciente — reusa el patrón de PatientCard */}
             <div className="flex items-center gap-3 bg-bg-default border border-border-default rounded-(--radius-lg) p-4">
                 <span className="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-green-100 text-green-800 text-sm font-semibold">

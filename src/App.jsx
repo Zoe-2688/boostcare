@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import DemoWelcome from './screens/DemoWelcome'
 import Landing from './screens/Landing'
 import Login from './screens/Login'
 import Dashboard from './screens/Dashboard'
@@ -19,7 +20,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<DemoWelcome />} />
+        <Route path="/landing" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/pacientes" element={<Pacientes />} />

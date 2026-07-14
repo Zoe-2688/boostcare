@@ -17,6 +17,9 @@ export default function RecetaEnviada() {
       <Button className="w-72" onClick={() => navigate(`/paciente/${id}`)}>
         Volver al perfil
       </Button>
+      <Button className="w-72" onClick={() => navigate('/dashboard')}>
+        Volver al Dashboard
+      </Button>
     </div>
   )
 }
