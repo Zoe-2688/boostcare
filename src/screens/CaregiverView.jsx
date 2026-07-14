@@ -3,16 +3,24 @@ import Badge from '../components/Badge'
 import Button from '../components/Button'
 import Note from '../components/Note'   // ← este falta
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 
 export default function CaregiverView() {
     // el cuidador ve UN paciente: Cármen (id 4)
+    const [nota, setNota] = useState('')
     const patient = patients.find(p => p.id === 4)
     const proximaToma = patient.meds[1]   // la de la noche
     const navigate = useNavigate()
 
     return (
         <div className="min-h-screen bg-surface max-w-sm mx-auto flex flex-col gap-6 px-4 pt-14 pb-8">
+            <button
+                onClick={() => navigate('/')}
+                className="text-sm text-secondary text-left"
+            >
+                ← Salir del modo cuidador
+            </button>
 
             {/* saludo */}
             <header className="flex flex-col gap-1">
@@ -45,9 +53,21 @@ export default function CaregiverView() {
             </section>
 
             {/* aviso al médico */}
-            <section className="flex flex-col gap-3">
+            <section className="flex flex-col gap-2">
                 <h2 className="text-sm font-semibold text-secondary">¿Notas algo diferente?</h2>
-                <Button type="secondary" onClick={() => navigate('/cuidador/aviso-enviado')}>
+                <textarea
+                    value={nota}
+                    onChange={e => setNota(e.target.value.slice(0, 200))}
+                    placeholder="Ej: Está más confundida de lo normal y no durmió bien."
+                    rows={3}
+                    className="w-full px-4 py-3 rounded-(--radius-md) bg-bg-default border border-border-default text-primary text-sm placeholder:text-neutral-500 outline-none focus:border-action-primary focus:border-2 resize-none"
+                />
+                <span className="text-xs text-secondary text-right">{nota.length}/200</span>
+                <Button
+                    type="secondary"
+                    disabled={!nota.trim()}
+                    onClick={() => navigate('/cuidador/aviso-enviado')}
+                >
                     Avisar a la Dra. Ramírez
                 </Button>
             </section>

@@ -17,6 +17,9 @@ export default function Dashboard() {
 
     return (
         <div className="min-h-screen bg-surface max-w-sm mx-auto flex flex-col gap-6 px-4 pt-14 pb-24">
+            <button onClick={() => navigate('/')} className="text-xs text-secondary">
+                ← Menú del demo
+            </button>
 
             <header className="flex flex-col gap-1">
                 <h1 className="text-2xl font-bold text-primary">Hola, Dra. Ramírez</h1>
@@ -26,7 +29,7 @@ export default function Dashboard() {
             </header>
 
             <ResumenIA patients={patients} />
-            
+
             {/* Agenda de hoy */}
             <section className="flex flex-col gap-3">
                 <h2 className="text-sm font-semibold text-secondary">Agenda de hoy</h2>
