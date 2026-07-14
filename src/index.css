@@ -92,8 +92,13 @@
 
 body {
   font-family: var(--font-sans);
+  
 }
 
+*:focus-visible {
+  outline: 2px solid var(--color-action-primary);
+  outline-offset: 2px;
+}
 /* ============================================
    Dark mode (v1.1): cuando toque, los semantic
    de arriba se moverán a :root y aquí vivirá

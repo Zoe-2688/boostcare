@@ -6,7 +6,7 @@ export default function AvisoEnviado() {
 
   return (
     <div className="min-h-screen bg-surface max-w-sm mx-auto flex flex-col items-center justify-center gap-4 px-8 text-center">
-      <span className="text-6xl text-success">✓</span>
+      <span className="text-6xl text-success" aria-hidden="true">✓</span>
       <h1 className="text-xl font-bold text-primary">Aviso enviado</h1>
       <p className="text-sm text-secondary">
         La Dra. Ramírez recibió tu mensaje y revisará el caso hoy.

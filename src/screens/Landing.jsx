@@ -37,7 +37,7 @@ export default function Landing() {
     { icon: '📝', title: 'Recetas digitales', text: 'Sin letra ilegible: paciente, cuidador y farmacia ven lo mismo.' },
   ].map(f => (
     <div key={f.title} className="flex flex-col gap-2 bg-surface rounded-(--radius-lg) p-4">
-      <span className="text-2xl">{f.icon}</span>
+      <span className="text-2xl" aria-hidden="true">{f.icon}</span>
       <span className="text-sm font-semibold text-primary">{f.title}</span>
       <span className="text-sm text-secondary">{f.text}</span>
     </div>
