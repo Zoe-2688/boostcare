@@ -30,7 +30,7 @@ export default function Landing() {
       </section>
       {/* features */}
 <section className="flex flex-col gap-4 px-4 py-12">
-  <h2 className="text-xl font-bold text-primary text-center">Todo lo que tu consulta necesita</h2>
+  <h2 className="text-xl font-bold text-primary text-center">Todo lo que necesitas para tu consulta</h2>
   {[
     { icon: '📅', title: 'Agenda inteligente', text: 'Tu día organizado: citas, recordatorios y huecos libres de un vistazo.' },
     { icon: '💊', title: 'Adherencia en tiempo real', text: 'Alertas cuando un paciente deja de tomar su medicación.' },
