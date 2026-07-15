@@ -29,7 +29,7 @@ export default function CaregiverView() {
             </header>
 
             <Note>
-                Tu médico te invitó a seguir el tratamiento de Cármen. Aquí ves cómo va y puedes avisarle si notas algo.
+                Tú estás con {patient.name} cada día; la doctora no. Si notas algo raro en ella, avisa a la doctora.
             </Note>
             {/* estado del paciente — reusa el patrón de PatientCard */}
             <div className="flex items-center gap-3 bg-bg-default border border-border-default rounded-(--radius-lg) p-4">

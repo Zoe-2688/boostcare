@@ -18,7 +18,7 @@ export default function PerfilMedico() {
       
       <div className="flex flex-col gap-0.5">
         <h1 className="text-xl font-bold text-primary">Dra. Carolina Ramírez</h1>
-        <p className="text-sm text-secondary">Geriatría · Clínica San Rafael</p>
+        <p className="text-sm text-secondary">Medicina General · Clínica San Rafael</p>
       </div>
     </div>
 

@@ -14,7 +14,7 @@ export default function Onboarding2() {
       </header>
 
       <Input id="nombre" label="Nombre completo" placeholder="Dra. Carolina Ramírez" />
-      <Input id="esp" label="Especialidad" placeholder="Geriatría" />
+      <Input id="esp" label="Especialidad" placeholder="Medicina General" />
       <Input id="reg" label="N° de registro médico" placeholder="123456" />
 
       <Button onClick={() => navigate('/onboarding/3')}>Continuar</Button>
